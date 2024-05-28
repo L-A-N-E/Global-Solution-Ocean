@@ -134,7 +134,8 @@ header {
 }
 
 .scrolled {
-    background-color: var.$cor-1;
+    background-color: var.$cor-bg-nav-mobile;
+    backdrop-filter: blur(12px);
 }
 
 // Animação

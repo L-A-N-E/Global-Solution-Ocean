@@ -1,0 +1,68 @@
+// Variaveis
+@use '../abstract/var';
+
+// Mixins
+@use '../abstract/mixins';
+
+#tecnologia {
+    width: 100vw;
+    height: 70vh;
+    background-color: var.$cor-2;
+
+    #title-tec {
+        @include mixins.margem-central(80%);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .line {
+            display: inline-block; /* Mantém o span como um elemento em linha */
+            width: 0; /* Começa com largura zero */
+            border-bottom: 2px solid #ffffff; /* Define a cor e a espessura da linha */
+            transition: width 1s ease; /* Adiciona uma transição suave para a largura */
+        }
+        
+        .line.active {
+            width: 60%; /* Expande a linha para 100% da largura do contêiner */
+        }
+
+        h1 {
+            @include mixins.ff-fs-cl(var.$text-t, 3rem, var.$cor-5, 400);
+            text-transform: uppercase;
+            text-align: center;
+            margin: 2rem 0 0 0;
+            padding: 0;
+        }
+    }
+
+    #info-tec {
+        @include mixins.margem-central(80%);
+        display: flex;
+
+        #left-info-tec {
+            display: flex;
+            align-items: center;
+
+            
+        }
+    }
+    
+}
+
+
+
+@media only screen and (max-width:840px){
+    #tecnologia {
+
+        #title-tec{
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+
+// @include mixins.ff-fs-cl(var.$text-p, 1rem, var.$cor-1, 400);

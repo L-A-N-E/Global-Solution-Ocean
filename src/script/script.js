@@ -16,6 +16,7 @@ function fecharMenu() {
     }, 150);
 }
 
+
 // Efeito Scroll Header
 window.addEventListener('scroll', function() {
     const header = document.getElementById('header');
@@ -23,23 +24,39 @@ window.addEventListener('scroll', function() {
 
     if (scrollPosition > 50) { // Alterar para o valor desejado para ativar a transição
         header.classList.add('scrolled');
-        header.classList.remove('transparent');
+        header.classList.remove('transparente');
     } else {
         header.classList.remove('scrolled');
-        header.classList.add('transparent');
+        header.classList.add('transparente');
     }
 });
 
+
+// Animação de Entrada com a class Hidden
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        console.log(entry)
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    })
+})
+const hiddenElemente = document.querySelectorAll(".hidden");
+hiddenElemente.forEach((el)=> observer.observe(el));
+
+
+// Animação Linha Seção Tecnologias Utilizadas
 document.addEventListener('DOMContentLoaded', function() {
-    const img = document.querySelector('#right-problema img');
-    const section = document.getElementById('problema');
+    const line = document.querySelector('.line');
+    const container = document.querySelector('#title-tec');
 
     function checkScroll() {
-        const sectionPosition = section.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.3;
+        const containerPosition = container.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.5;
 
-        if (sectionPosition < screenPosition) {
-            img.classList.add('visible');
+        if (containerPosition < screenPosition) {
+            line.classList.add('active');
+            window.removeEventListener('scroll', checkScroll); // Remove o evento após a ativação
         }
     }
 

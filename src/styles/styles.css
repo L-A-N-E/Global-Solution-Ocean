@@ -1,4 +1,17 @@
 @charset "UTF-8";
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 2s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0%);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -159,7 +172,9 @@ header .margin-header #nav-mobile ul li a:hover::after {
 }
 
 .scrolled {
-  background-color: #012E40;
+  background-color: rgba(211, 211, 211, 0.0666666667);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
 }
 
 @keyframes slideFromRight {
@@ -231,6 +246,7 @@ header .margin-header #nav-mobile ul li a:hover::after {
   font-size: 3rem;
   color: #fff;
   font-weight: 300;
+  text-transform: uppercase;
   margin: 0;
   opacity: 0.85;
   padding: 0;
@@ -285,17 +301,11 @@ header .margin-header #nav-mobile ul li a:hover::after {
   flex: 1;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
 }
 #problema #content-problema #right-problema img {
   width: 80%;
   height: auto;
-  transform: translateX(10%);
-  opacity: 0;
-  transition: transform 2s ease-out, opacity 1s ease-out;
-}
-#problema #content-problema #right-problema img.visible {
-  transform: translateX(0);
-  opacity: 1;
 }
 
 @media only screen and (max-width: 800px) {
@@ -315,9 +325,56 @@ header .margin-header #nav-mobile ul li a:hover::after {
     align-items: center;
   }
   #problema #content-problema #left-problema h1 {
-    font-size: 30px;
+    font-size: 2rem;
   }
   #problema #content-problema #right-problema {
     width: 100%;
+  }
+}
+#tecnologia {
+  width: 100vw;
+  height: 70vh;
+  background-color: #024959;
+}
+#tecnologia #title-tec {
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#tecnologia #title-tec .line {
+  display: inline-block; /* Mantém o span como um elemento em linha */
+  width: 0; /* Começa com largura zero */
+  border-bottom: 2px solid #ffffff; /* Define a cor e a espessura da linha */
+  transition: width 1s ease; /* Adiciona uma transição suave para a largura */
+}
+#tecnologia #title-tec .line.active {
+  width: 60%; /* Expande a linha para 100% da largura do contêiner */
+}
+#tecnologia #title-tec h1 {
+  font-family: "Freeman", sans-serif;
+  font-size: 3rem;
+  color: #D8E6F2;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2rem 0 0 0;
+  padding: 0;
+}
+#tecnologia #info-tec {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+#tecnologia #info-tec #left-info-tec {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 840px) {
+  #tecnologia #title-tec h1 {
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=styles.css.map */
