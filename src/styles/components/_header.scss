@@ -4,6 +4,7 @@
 // Mixins
 @use '../abstract/mixins';
 
+
 // Estilização do Header
 header {
     height: 70px;
@@ -30,7 +31,6 @@ header {
         #nav-desktop {
             display: inline-flex;
             align-items: center;
-            @include mixins.screen-none(840px);
 
             ul {
                 padding: 0;
@@ -71,7 +71,6 @@ header {
         .btn-abrir-menu {
             display: none;
             cursor: pointer;
-            @include mixins.screen-flex(840px);
         }
 
         #nav-mobile {
@@ -86,7 +85,6 @@ header {
             top: 0;
             animation-duration: 0.3s; 
             animation-fill-mode: forwards; 
-            @include mixins.screen-full(300px);
 
             ul {
                 padding: 0;
@@ -130,6 +128,7 @@ header {
     }
 }
 
+// Efeitos
 .transparente {
     background: transparent;
 }
@@ -138,6 +137,7 @@ header {
     background-color: var.$cor-1;
 }
 
+// Animação
 @keyframes slideFromRight {
     from {
         right: -250px;
@@ -156,3 +156,37 @@ header {
     }
 }
 
+
+// Responsivide
+
+// Tablet
+@media only screen and (max-width:840px){
+    header {
+        .margin-header {
+            #nav-desktop {
+                display: none;
+            }
+
+            .btn-abrir-menu {
+                display: flex;
+            }
+        }
+    }
+}
+
+// Mobile
+@media only screen and (max-width:300px){
+    header {
+        .margin-header {
+            #nav-mobile {
+                width: 100vw;
+                border-radius: 0;
+                justify-content: center;
+
+                ul {
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

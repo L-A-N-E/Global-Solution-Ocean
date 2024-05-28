@@ -11,29 +11,6 @@
     font-weight: $f-weight;
 }
 
-// Responsividade
-@mixin screen-flex ($width){
-    @media screen and (max-width: $width) {
-        display: flex;
-    }
-}
-
-@mixin screen-none ($width){
-    @media screen and (max-width: $width) {
-        display: none;
-    }
-}
-
-@mixin screen-full ($width){
-    @media screen and (max-width: $width) {
-        width: 100vw;
-        border-radius: 0;
-        justify-content: center;
-        ul {
-            align-items: center;
-        }
-    }
-}
 
 
 

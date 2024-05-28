@@ -1,7 +1,12 @@
-@use 'abstract/root';
+// Padrão
+@use 'abstract/root'; 
 
+// Header
 @use 'components/header';
 
+// Home
 @use 'components/home';
 
+// Problema
 @use 'components/problema';
+

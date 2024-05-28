@@ -1,7 +1,41 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Barra de Rolagem */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 12px;
+}
+
+/* Background */
+::-webkit-scrollbar-track {
+  background: #012E40;
+  border-radius: 0px;
+}
+
+/* Quando Move */
+::-webkit-scrollbar-thumb {
+  background: #ADC5D9;
+  border-radius: 10px;
+}
+
+/* Hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4E8DA6;
+}
+
+/* Botões */
+::-webkit-scrollbar-button {
+  display: none;
 }
 
 header {
@@ -31,11 +65,6 @@ header .margin-header h1 {
 header .margin-header #nav-desktop {
   display: inline-flex;
   align-items: center;
-}
-@media screen and (max-width: 840px) {
-  header .margin-header #nav-desktop {
-    display: none;
-  }
 }
 header .margin-header #nav-desktop ul {
   padding: 0;
@@ -74,11 +103,6 @@ header .margin-header .btn-abrir-menu {
   display: none;
   cursor: pointer;
 }
-@media screen and (max-width: 840px) {
-  header .margin-header .btn-abrir-menu {
-    display: flex;
-  }
-}
 header .margin-header #nav-mobile {
   display: none;
   width: calc(40vw + 10%);
@@ -92,16 +116,6 @@ header .margin-header #nav-mobile {
   top: 0;
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
-}
-@media screen and (max-width: 300px) {
-  header .margin-header #nav-mobile {
-    width: 100vw;
-    border-radius: 0;
-    justify-content: center;
-  }
-  header .margin-header #nav-mobile ul {
-    align-items: center;
-  }
 }
 header .margin-header #nav-mobile ul {
   padding: 0;
@@ -164,6 +178,24 @@ header .margin-header #nav-mobile ul li a:hover::after {
     right: -250px;
   }
 }
+@media only screen and (max-width: 840px) {
+  header .margin-header #nav-desktop {
+    display: none;
+  }
+  header .margin-header .btn-abrir-menu {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 300px) {
+  header .margin-header #nav-mobile {
+    width: 100vw;
+    border-radius: 0;
+    justify-content: center;
+  }
+  header .margin-header #nav-mobile ul {
+    align-items: center;
+  }
+}
 #home {
   cursor: url("") 0 0, auto;
 }
@@ -205,18 +237,87 @@ header .margin-header #nav-mobile ul li a:hover::after {
 }
 
 #problema {
-  width: 90%;
+  height: 60vh;
+  background-color: #D8E6F2;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+#problema #content-problema {
+  width: 80%;
   margin: 0 auto;
-  height: 90vh;
-  background-color: #fff;
+  align-items: center;
+  height: 100%;
+  display: flex;
+}
+#problema #content-problema #left-problema {
+  height: 100%;
+  width: 50%;
   display: flex;
   gap: 1rem;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
 }
-#problema #problema-left {
-  background-color: #012E40;
-  width: 50%;
+#problema #content-problema #left-problema h1 {
+  font-family: "Freeman", sans-serif;
+  font-size: 3rem;
+  color: #024959;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }
-#problema #problema-right {
-  background-color: #024959;
+#problema #content-problema #left-problema p {
+  width: 80%;
+  font-family: "Monteserrat", sans-serif;
+  font-size: 1rem;
+  color: #012E40;
+  font-weight: 400;
+  text-align: justify;
+  margin: 0;
+  padding: 0;
+}
+#problema #content-problema #right-problema {
   width: 50%;
+  height: 100%;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+#problema #content-problema #right-problema img {
+  width: 80%;
+  height: auto;
+  transform: translateX(10%);
+  opacity: 0;
+  transition: transform 2s ease-out, opacity 1s ease-out;
+}
+#problema #content-problema #right-problema img.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+@media only screen and (max-width: 800px) {
+  #problema {
+    display: flex;
+    height: auto;
+  }
+  #problema #content-problema {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #problema #content-problema #left-problema {
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  #problema #content-problema #left-problema h1 {
+    font-size: 30px;
+  }
+  #problema #content-problema #right-problema {
+    width: 100%;
+  }
 }/*# sourceMappingURL=styles.css.map */

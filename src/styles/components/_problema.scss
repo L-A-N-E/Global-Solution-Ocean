@@ -4,20 +4,94 @@
 // Mixins
 @use '../abstract/mixins';
 
+// Estilização da Seção Problema
 #problema {
-    @include mixins.margem-central(90%);
-    height: 90vh;
-    background-color: var.$cor-branca;
-    display: flex;
+    height: 60vh;
+    background-color: var.$cor-5;
     gap: 1rem;
+    display: flex;
+    flex-direction: column;
 
-    #problema-left{
-        background-color: var.$cor-1;
-        width: 50%;
+    #content-problema {
+        @include mixins.margem-central(80%);
+        align-items: center;
+        height: 100%;
+        display: flex;
+
+        #left-problema {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            gap: 1rem;
+            flex: 1;
+            flex-direction: column;
+            justify-content: center;
+            h1 {
+                @include mixins.ff-fs-cl(var.$text-t, 3rem, var.$cor-2, 900);
+                text-transform: uppercase;
+                margin: 0;
+                padding: 0;
+            }
+
+            p {
+                width: 80%;
+                @include mixins.ff-fs-cl(var.$text-p, 1rem, var.$cor-1, 400);
+                text-align: justify;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        #right-problema {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 80%;
+                height: auto;
+                transform: translateX(10%);
+                opacity: 0;
+                transition: transform 2s ease-out, opacity 1s ease-out;
+            }
+
+            img.visible {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
     }
+}
 
-    #problema-right{
-        background-color: var.$cor-2;
-        width: 50%;
+// Responsividade
+// Tablet
+@media only screen and (max-width:800px) {
+    #problema {
+        display: flex;
+        height: auto;
+        
+        #content-problema {
+            flex-direction: column;
+            gap: 2rem;
+
+            #left-problema {
+                margin-top: 1rem;
+                text-align: center;
+                width: 100%;
+                gap: 0.5rem;
+                align-items: center;
+
+                h1 {
+                    font-size: 30px;
+                }
+            }
+
+            #right-problema {
+                width: 100%;
+            }
+        }
     }
 }
