@@ -4,6 +4,7 @@
 // Mixins
 @use '../abstract/mixins';
 
+// Estilizando Seção Tecnologia
 #tecnologia {
     width: 100vw;
     height: 600px;
@@ -26,8 +27,6 @@
                 width: 100%;
             }
         }
-        
-
 
         #titulo-tec {
             width: 40%;
@@ -55,16 +54,15 @@
 }
 
 
-
+// Responsividade
+// Tablet
 @media only screen and (max-width:840px){
     #tecnologia {
-        height: 300px;
+        height: auto;
 
         #content-tecnologia {   
             flex-direction: column;
-            justify-content: space-around;
-            margin-bottom: 2rem;
-            margin-top: 2rem;
+            justify-content: space-evenly;
 
             #banner-tec {
                 height: 40%;
@@ -86,5 +84,20 @@
     }
 }
 
-
-// @include mixins.ff-fs-cl(var.$text-p, 1rem, var.$cor-1, 400);
+// Mobile
+@media only screen and (max-width:300px) {
+    #tecnologia {
+        #content-tecnologia {  
+            
+            #titulo-tec{
+                h1 {
+                    font-size: 2rem;
+                    text-align: center;
+                }
+                p {
+                    font-size: 1rem;
+                }
+            } 
+        }
+    }
+}

@@ -1,3 +1,18 @@
+// ELEMENTOS
+// Animação de Entrada com a class Hidden
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        console.log(entry)
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+    })
+})
+const hiddenElemente = document.querySelectorAll(".hidden-right-to-left, .hidden-left-to-right");
+hiddenElemente.forEach((el)=> observer.observe(el));
+
+
+// HEADER
 // Abrir Menu 
 function abrirMenu() {
     const open = document.getElementById('nav-mobile');
@@ -6,7 +21,6 @@ function abrirMenu() {
         open.style.display = 'flex';
     }, 200);
 }
-
 // Fechar Menu
 function fecharMenu() {
     const close = document.getElementById('nav-mobile')
@@ -15,7 +29,6 @@ function fecharMenu() {
         close.style.display = 'none';
     }, 150);
 }
-
 
 // Efeito Scroll Header
 window.addEventListener('scroll', function() {
@@ -32,20 +45,8 @@ window.addEventListener('scroll', function() {
 });
 
 
-// Animação de Entrada com a class Hidden
-const observer = new IntersectionObserver((entries)=>{
-    entries.forEach((entry)=>{
-        console.log(entry)
-        if(entry.isIntersecting){
-            entry.target.classList.add('show');
-        }
-    })
-})
-const hiddenElemente = document.querySelectorAll(".hidden");
-hiddenElemente.forEach((el)=> observer.observe(el));
-
-
-// Declarando Variaveis para
+// SEÇÃO TECNOLOGIA
+// Declarando Variaveis para Slide 
 let imagens = ['../src/assets/tecnologias/html.png', '../src/assets/tecnologias/css.png', '../src/assets/tecnologias/js.png', '../src/assets/tecnologias/c++.png' , '../src/assets/tecnologias/py.png'];
 let index = 0;
 let time = 5000;

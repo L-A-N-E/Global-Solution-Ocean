@@ -12,5 +12,11 @@
 }
 
 
+@mixin animacao-entrada (){
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 2s;
+}
+
 
 

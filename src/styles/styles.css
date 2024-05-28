@@ -1,12 +1,18 @@
-@charset "UTF-8";
 .blue {
   color: #ADC5D9;
 }
 
-.hidden {
+.hidden-right-to-left {
+  transform: translateX(100%);
   opacity: 0;
   filter: blur(5px);
-  transform: translateX(100%);
+  transition: all 2s;
+}
+
+.hidden-left-to-right {
+  transform: translateX(-100%);
+  opacity: 0;
+  filter: blur(5px);
   transition: all 2s;
 }
 
@@ -27,30 +33,25 @@ body {
   box-sizing: border-box;
 }
 
-/* Barra de Rolagem */
 ::-webkit-scrollbar {
   width: 7px;
   height: 12px;
 }
 
-/* Background */
 ::-webkit-scrollbar-track {
   background: #012E40;
   border-radius: 0px;
 }
 
-/* Quando Move */
 ::-webkit-scrollbar-thumb {
   background: #ADC5D9;
   border-radius: 10px;
 }
 
-/* Hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #4E8DA6;
 }
 
-/* Botões */
 ::-webkit-scrollbar-button {
   display: none;
 }
@@ -274,7 +275,7 @@ header .margin-header #nav-mobile ul li a:hover::after {
   height: 100%;
   width: 50%;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   flex: 1;
   flex-direction: column;
   justify-content: center;
@@ -386,13 +387,11 @@ header .margin-header #nav-mobile ul li a:hover::after {
 
 @media only screen and (max-width: 840px) {
   #tecnologia {
-    height: 300px;
+    height: auto;
   }
   #tecnologia #content-tecnologia {
     flex-direction: column;
-    justify-content: space-around;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    justify-content: space-evenly;
   }
   #tecnologia #content-tecnologia #banner-tec {
     height: 40%;
@@ -408,5 +407,14 @@ header .margin-header #nav-mobile ul li a:hover::after {
   }
   #tecnologia #content-tecnologia #titulo-tec p {
     text-align: center;
+  }
+}
+@media only screen and (max-width: 300px) {
+  #tecnologia #content-tecnologia #titulo-tec h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  #tecnologia #content-tecnologia #titulo-tec p {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=styles.css.map */

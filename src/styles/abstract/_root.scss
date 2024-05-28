@@ -1,5 +1,7 @@
+// Variaveis
 @use '../abstract/var';
 
+// Estilização
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -12,30 +14,30 @@ body {
 }
 
 // Personalizando Barra de Rolagem
-/* Barra de Rolagem */
+// Barra de Rolagem
 ::-webkit-scrollbar {
     width: 7px; 
     height: 12px; 
 }
 
-/* Background */
+// Background
 ::-webkit-scrollbar-track {
     background: var.$cor-1; 
     border-radius: 0px; 
 }
 
-/* Quando Move */
+// Quando Move
 ::-webkit-scrollbar-thumb {
     background: var.$cor-4;
     border-radius: 10px; 
 }
 
-/* Hover */
+// Hover
 ::-webkit-scrollbar-thumb:hover {
     background: var.$cor-3;
 }
 
-/* Botões */
+// Botões
 ::-webkit-scrollbar-button {
     display: none;
 }

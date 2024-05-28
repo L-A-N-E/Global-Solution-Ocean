@@ -1,3 +1,5 @@
+@use 'mixins';
+
 // Cores
 $cor-1: #012E40 ;
 $cor-2: #024959;
@@ -22,12 +24,16 @@ $text-t: 'Freeman', sans-serif;
 }
 
 // Efeito
-.hidden{
-    opacity: 0;
-    filter: blur(5px);
+.hidden-right-to-left{
     transform: translateX(100%);
-    transition: all 2s;
+    @include mixins.animacao-entrada()
 }
+
+.hidden-left-to-right{
+    transform: translateX(-100%);
+    @include mixins.animacao-entrada()
+}
+
 .show{
     opacity: 1;
     filter: blur(0px);
