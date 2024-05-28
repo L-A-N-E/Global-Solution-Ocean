@@ -22,7 +22,7 @@ window.addEventListener('scroll', function() {
     const header = document.getElementById('header');
     const scrollPosition = window.scrollY;
 
-    if (scrollPosition > 50) { // Alterar para o valor desejado para ativar a transição
+    if (scrollPosition > 50) {
         header.classList.add('scrolled');
         header.classList.remove('transparente');
     } else {
@@ -45,20 +45,24 @@ const hiddenElemente = document.querySelectorAll(".hidden");
 hiddenElemente.forEach((el)=> observer.observe(el));
 
 
-// Animação Linha Seção Tecnologias Utilizadas
-document.addEventListener('DOMContentLoaded', function() {
-    const line = document.querySelector('.line');
-    const container = document.querySelector('#title-tec');
+// Declarando Variaveis para
+let imagens = ['../src/assets/tecnologias/html.png', '../src/assets/tecnologias/css.png', '../src/assets/tecnologias/js.png', '../src/assets/tecnologias/c++.png' , '../src/assets/tecnologias/py.png'];
+let index = 0;
+let time = 5000;
 
-    function checkScroll() {
-        const containerPosition = container.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.5;
+// Função Slide
+function slideShow() {
+    document.getElementById('img-banner').style.opacity = '0';
+    setTimeout(function() {
+        document.getElementById('img-banner').src = imagens[index];
+        index++;
 
-        if (containerPosition < screenPosition) {
-            line.classList.add('active');
-            window.removeEventListener('scroll', checkScroll); // Remove o evento após a ativação
+        if (index == imagens.length) {
+            index = 0;
         }
-    }
 
-    window.addEventListener('scroll', checkScroll);
-});
+        document.getElementById('img-banner').style.opacity = '1';
+    }, 200);
+    setTimeout(slideShow, time);
+}
+slideShow();

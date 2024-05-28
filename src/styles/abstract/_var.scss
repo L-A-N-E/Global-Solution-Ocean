@@ -16,11 +16,16 @@ $gradiente-2: linear-gradiente(180deg, $cor-4 0%, $cor-3 86.78%);
 $text-p: 'Monteserrat', sans-serif;
 $text-t: 'Freeman', sans-serif;
 
+// Strong
+.blue {
+    color: $cor-4;
+}
+
 // Efeito
 .hidden{
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-100%);
+    transform: translateX(100%);
     transition: all 2s;
 }
 .show{

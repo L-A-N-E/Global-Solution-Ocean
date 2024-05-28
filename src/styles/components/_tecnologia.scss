@@ -6,60 +6,82 @@
 
 #tecnologia {
     width: 100vw;
-    height: 70vh;
+    height: 600px;
     background-color: var.$cor-2;
+    display: flex;
 
-    #title-tec {
+    #content-tecnologia {
         @include mixins.margem-central(80%);
-        height: 100%;
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
 
-        .line {
-            display: inline-block; /* Mantém o span como um elemento em linha */
-            width: 0; /* Começa com largura zero */
-            border-bottom: 2px solid #ffffff; /* Define a cor e a espessura da linha */
-            transition: width 1s ease; /* Adiciona uma transição suave para a largura */
+        #banner-tec {
+            width: auto;
+            height: 70%;
+
+            #img-banner {
+                height: 100%;
+                transition: opacity 0.5s ease;
+                width: 100%;
+            }
         }
         
-        .line.active {
-            width: 60%; /* Expande a linha para 100% da largura do contêiner */
-        }
 
-        h1 {
-            @include mixins.ff-fs-cl(var.$text-t, 3rem, var.$cor-5, 400);
-            text-transform: uppercase;
-            text-align: center;
-            margin: 2rem 0 0 0;
-            padding: 0;
-        }
-    }
 
-    #info-tec {
-        @include mixins.margem-central(80%);
-        display: flex;
-
-        #left-info-tec {
+        #titulo-tec {
+            width: 40%;
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            align-items: end;
 
-            
+            h1 {
+                @include mixins.ff-fs-cl(var.$text-t, 3rem, var.$cor-branca, 300);
+                margin: 0;
+                padding: 0;
+                text-align: right;
+                text-transform: uppercase;
+            }
+
+            p {
+                @include mixins.ff-fs-cl(var.$text-p, 1rem, var.$cor-branca, 300);
+                margin: 1rem 0 0 0;
+                padding: 0;
+                text-align: right;
+                text-transform: uppercase;
+            }
         }
     }
-    
 }
 
 
 
 @media only screen and (max-width:840px){
     #tecnologia {
+        height: 300px;
 
-        #title-tec{
+        #content-tecnologia {   
+            flex-direction: column;
+            justify-content: space-around;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
 
-            h1 {
-                font-size: 2rem;
+            #banner-tec {
+                height: 40%;
             }
+
+            #titulo-tec{
+                width: auto;
+                display: flex;
+                align-items: center;
+                h1 {
+                    font-size: 2rem;
+                    text-align: center;
+                }
+                p {
+                    text-align: center;
+                }
+            } 
         }
     }
 }

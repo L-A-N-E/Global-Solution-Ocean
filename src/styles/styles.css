@@ -1,8 +1,12 @@
 @charset "UTF-8";
+.blue {
+  color: #ADC5D9;
+}
+
 .hidden {
   opacity: 0;
   filter: blur(5px);
-  transform: translateX(-100%);
+  transform: translateX(100%);
   transition: all 2s;
 }
 
@@ -14,13 +18,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 /* Barra de Rolagem */
@@ -333,48 +337,76 @@ header .margin-header #nav-mobile ul li a:hover::after {
 }
 #tecnologia {
   width: 100vw;
-  height: 70vh;
+  height: 600px;
   background-color: #024959;
+  display: flex;
 }
-#tecnologia #title-tec {
+#tecnologia #content-tecnologia {
   width: 80%;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#tecnologia #content-tecnologia #banner-tec {
+  width: auto;
+  height: 70%;
+}
+#tecnologia #content-tecnologia #banner-tec #img-banner {
   height: 100%;
+  transition: opacity 0.5s ease;
+  width: 100%;
+}
+#tecnologia #content-tecnologia #titulo-tec {
+  width: 40%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: end;
 }
-#tecnologia #title-tec .line {
-  display: inline-block; /* Mantém o span como um elemento em linha */
-  width: 0; /* Começa com largura zero */
-  border-bottom: 2px solid #ffffff; /* Define a cor e a espessura da linha */
-  transition: width 1s ease; /* Adiciona uma transição suave para a largura */
-}
-#tecnologia #title-tec .line.active {
-  width: 60%; /* Expande a linha para 100% da largura do contêiner */
-}
-#tecnologia #title-tec h1 {
+#tecnologia #content-tecnologia #titulo-tec h1 {
   font-family: "Freeman", sans-serif;
   font-size: 3rem;
-  color: #D8E6F2;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 2rem 0 0 0;
+  color: #fff;
+  font-weight: 300;
+  margin: 0;
   padding: 0;
+  text-align: right;
+  text-transform: uppercase;
 }
-#tecnologia #info-tec {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-}
-#tecnologia #info-tec #left-info-tec {
-  display: flex;
-  align-items: center;
+#tecnologia #content-tecnologia #titulo-tec p {
+  font-family: "Monteserrat", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 300;
+  margin: 1rem 0 0 0;
+  padding: 0;
+  text-align: right;
+  text-transform: uppercase;
 }
 
 @media only screen and (max-width: 840px) {
-  #tecnologia #title-tec h1 {
+  #tecnologia {
+    height: 300px;
+  }
+  #tecnologia #content-tecnologia {
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  #tecnologia #content-tecnologia #banner-tec {
+    height: 40%;
+  }
+  #tecnologia #content-tecnologia #titulo-tec {
+    width: auto;
+    display: flex;
+    align-items: center;
+  }
+  #tecnologia #content-tecnologia #titulo-tec h1 {
     font-size: 2rem;
+    text-align: center;
+  }
+  #tecnologia #content-tecnologia #titulo-tec p {
+    text-align: center;
   }
 }/*# sourceMappingURL=styles.css.map */
