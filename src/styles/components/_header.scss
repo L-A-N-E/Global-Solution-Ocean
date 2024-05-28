@@ -1,0 +1,158 @@
+// Variaveis
+@use '../abstract/var';
+
+// Mixins
+@use '../abstract/mixins';
+
+// Estilização do Header
+header {
+    height: 70px;
+    width: 100vw;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+
+
+    .margin-header {
+        height: 70px;
+        @include mixins.margem-central(90%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            @include mixins.ff-fs-cl(var.$text-t, 1.4rem, var.$cor-branca, 300);
+            margin: 0;
+            padding: 0;
+        }
+
+        #nav-desktop {
+            display: inline-flex;
+            align-items: center;
+            @include mixins.screen-none(840px);
+
+            ul {
+                padding: 0;
+                display: flex;
+                list-style: none;
+                gap: 1.5rem;
+
+                li {
+                    @include mixins.ff-fs-cl(var.$text-p, 0.85rem, var.$cor-branca, 300);
+                    text-transform: uppercase;
+                    cursor: pointer;
+
+                    a{
+                        text-decoration: none;
+                        color: var.$cor-branca;
+                        transition: all ease-in-out 0.4s;
+                        position: relative;
+                    }
+
+                    a::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: -1px; 
+                        width: 0; 
+                        height: 2px; 
+                        background-image: linear-gradient(to right, transparent, var.$cor-5); 
+                        transition: width 0.4s ease;
+                    }
+                    
+                    a:hover::after {
+                        width: 100%; 
+                    }
+                }
+            }
+        }
+
+        .btn-abrir-menu {
+            display: none;
+            cursor: pointer;
+            @include mixins.screen-flex(840px);
+        }
+
+        #nav-mobile {
+            display: none;
+            width: calc(40vw + 10%);
+            height: 100vh;
+            background-color: var.$cor-bg-nav-mobile;
+            backdrop-filter: blur(12px);
+            border-radius: 20px 0px 0px 0px;
+            position: fixed;
+            right: 0;
+            top: 0;
+            animation-duration: 0.3s; 
+            animation-fill-mode: forwards; 
+            @include mixins.screen-full(300px);
+
+            ul {
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                gap: 1.5rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+
+                li {
+                    @include mixins.ff-fs-cl(var.$text-p, 0.85rem, var.$cor-branca, 300);
+                    text-transform: uppercase;
+                    cursor: pointer;
+
+                    a{
+                        text-decoration: none;
+                        color: var.$cor-branca;
+                        transition: all ease-in-out 0.4s;
+                        position: relative;
+                    }
+
+                    a::after {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        bottom: -1px; 
+                        width: 0; 
+                        height: 2px; 
+                        background-image: linear-gradient(to right, transparent, var.$cor-5); 
+                        transition: width 0.4s ease;
+                    }
+                    
+                    a:hover::after {
+                        width: 100%; 
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.transparente {
+    background: transparent;
+}
+
+.scrolled {
+    background-color: var.$cor-1;
+}
+
+@keyframes slideFromRight {
+    from {
+        right: -250px;
+    }
+    to {
+        right: 0;
+    }
+}
+
+@keyframes slideToRight {
+    from {
+        right: 0;
+    }
+    to {
+        right: -250px;
+    }
+}
+

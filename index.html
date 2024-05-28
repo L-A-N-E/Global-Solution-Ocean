@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mar Azul</title>
+    <link rel="stylesheet" href="src/styles/styles.css">
+
+    <!-- Fonte Freeman -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freeman&display=swap" rel="stylesheet">
+
+    <!-- Fonte Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freeman&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Conteudo Pagina -->
+    <main>
+        <!-- Header -->
+        <header id="header" class="transparente">
+            <div class="margin-header">
+                <!-- Logo -->
+                <h1>LOGO</h1>
+
+                <!-- Desktop -->
+                <nav id="nav-desktop">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Problema</a></li>
+                        <li><a href="#">Tecnologia</a></li>
+                        <li><a href="#">Objetivos</a></li>
+                        <li><a href="#">Público</a></li>
+                        <li><a href="#">Benefícios</a></li>
+                        <li><a href="#">Dia-a-Dia</a></li>
+                    </ul>
+                </nav>
+                <!-- Bnt Abrir Menu -->
+                <div class="btn-abrir-menu" onclick="abrirMenu()" >
+                    <img src="src/assets/open-menu.svg" alt="">
+                </div>
+                
+                <!-- Mobile -->
+                <nav id="nav-mobile">
+                    <ul>
+                        <li onclick="fecharMenu()"><img src="src/assets/close-menu.svg" alt=""></li>
+                        <li onclick="fecharMenu()"><a href="#">Home</a></li>
+                        <li onclick="fecharMenu()"><a href="#">Problema</a></li>
+                        <li onclick="fecharMenu()"><a href="#">Tecnologia</a></li>
+                        <li onclick="fecharMenu()"><a href="#">Objetivos</a></li>
+                        <li onclick="fecharMenu()"><a href="#">Público</a></li>
+                        <li onclick="fecharMenu()"><a href="#">Benefícios</a></li>
+                        <li onclick="fecharMenu()"><a href="#">Dia- a-Dia</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <!-- Seção Home 1 -->
+        <section id="home">
+            <div class="video-background-section">
+                <video autoplay muted loop id="background-video">
+                    <source src="src/assets/video-bg-home.mp4" type="video/mp4">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+                <div class="content">
+                    <h1>Global Solution</h1>
+                    <p></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Problema 1 -->
+        <section id="problema">
+            <!-- Esquerda -->
+            <div id="problema-left">
+
+            </div>
+
+            <!-- Direita -->
+            <div id="problema-right">
+
+            </div>
+        </section>
+
+        <!-- Seção Tecnologia Utilizada 2 -->
+        <section id="tecnologia"></section>
+
+        <!-- Seção Objetivos 3 -->
+        <section id="objetivos"></section>
+
+        <!-- Seção Público 4 -->
+        <section id="publico"></section>
+
+        <!-- Seção Beneficios 5 -->
+        <section id="beneficios"></section>
+
+        <!-- Seção Utilização no Dia a Dia 6 -->
+        <section id="dia-a-dia"></section>
+
+        <!-- Footer -->
+        <footer></footer>
+    </main>
+
+    <script src="src/script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+// Variaveis
+@use '../abstract/var';
+
+// Mixins
+@use '../abstract/mixins';
+
+// Estilização do Home
+#home {
+    cursor: url('') 0 0, auto;
+    .video-background-section {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+
+        #background-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .content {
+            @include mixins.margem-central(80%);
+            position: relative;
+            z-index: 1;
+            color: var.$cor-branca;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+    
+            h1 {
+                @include mixins.ff-fs-cl(var.$text-t, 3rem, var.$cor-branca, 300);
+                margin: 0;
+                opacity: 0.85;
+                padding: 0;
+            }
+        }
+    }
+}

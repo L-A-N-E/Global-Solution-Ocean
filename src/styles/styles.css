@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 70px;
+  width: 100vw;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+header .margin-header {
+  height: 70px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .margin-header h1 {
+  font-family: "Freeman", sans-serif;
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+header .margin-header #nav-desktop {
+  display: inline-flex;
+  align-items: center;
+}
+@media screen and (max-width: 840px) {
+  header .margin-header #nav-desktop {
+    display: none;
+  }
+}
+header .margin-header #nav-desktop ul {
+  padding: 0;
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+header .margin-header #nav-desktop ul li {
+  font-family: "Monteserrat", sans-serif;
+  font-size: 0.85rem;
+  color: #fff;
+  font-weight: 300;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+header .margin-header #nav-desktop ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: all ease-in-out 0.4s;
+  position: relative;
+}
+header .margin-header #nav-desktop ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, transparent, #D8E6F2);
+  transition: width 0.4s ease;
+}
+header .margin-header #nav-desktop ul li a:hover::after {
+  width: 100%;
+}
+header .margin-header .btn-abrir-menu {
+  display: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 840px) {
+  header .margin-header .btn-abrir-menu {
+    display: flex;
+  }
+}
+header .margin-header #nav-mobile {
+  display: none;
+  width: calc(40vw + 10%);
+  height: 100vh;
+  background-color: rgba(211, 211, 211, 0.0666666667);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  border-radius: 20px 0px 0px 0px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+@media screen and (max-width: 300px) {
+  header .margin-header #nav-mobile {
+    width: 100vw;
+    border-radius: 0;
+    justify-content: center;
+  }
+  header .margin-header #nav-mobile ul {
+    align-items: center;
+  }
+}
+header .margin-header #nav-mobile ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+header .margin-header #nav-mobile ul li {
+  font-family: "Monteserrat", sans-serif;
+  font-size: 0.85rem;
+  color: #fff;
+  font-weight: 300;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+header .margin-header #nav-mobile ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: all ease-in-out 0.4s;
+  position: relative;
+}
+header .margin-header #nav-mobile ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, transparent, #D8E6F2);
+  transition: width 0.4s ease;
+}
+header .margin-header #nav-mobile ul li a:hover::after {
+  width: 100%;
+}
+
+.transparente {
+  background: transparent;
+}
+
+.scrolled {
+  background-color: #012E40;
+}
+
+@keyframes slideFromRight {
+  from {
+    right: -250px;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes slideToRight {
+  from {
+    right: 0;
+  }
+  to {
+    right: -250px;
+  }
+}
+#home {
+  cursor: url("") 0 0, auto;
+}
+#home .video-background-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+#home .video-background-section #background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+#home .video-background-section .content {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#home .video-background-section .content h1 {
+  font-family: "Freeman", sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 300;
+  margin: 0;
+  opacity: 0.85;
+  padding: 0;
+}
+
+#problema {
+  width: 90%;
+  margin: 0 auto;
+  height: 90vh;
+  background-color: #fff;
+  display: flex;
+  gap: 1rem;
+}
+#problema #problema-left {
+  background-color: #012E40;
+  width: 50%;
+}
+#problema #problema-right {
+  background-color: #024959;
+  width: 50%;
+}/*# sourceMappingURL=styles.css.map */

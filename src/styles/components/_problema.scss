@@ -1,0 +1,23 @@
+// Variaveis
+@use '../abstract/var';
+
+// Mixins
+@use '../abstract/mixins';
+
+#problema {
+    @include mixins.margem-central(90%);
+    height: 90vh;
+    background-color: var.$cor-branca;
+    display: flex;
+    gap: 1rem;
+
+    #problema-left{
+        background-color: var.$cor-1;
+        width: 50%;
+    }
+
+    #problema-right{
+        background-color: var.$cor-2;
+        width: 50%;
+    }
+}
