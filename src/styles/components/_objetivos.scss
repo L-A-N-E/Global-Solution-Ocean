@@ -4,17 +4,18 @@
 // Mixins
 @use '../abstract/mixins';
 
-#objetivos {
+// Estilizando Seção Objetivos
+#objetivo {
     width: 100vw;
     height: 500px;
     position: relative;
-    background-image: url(../assets/animais/tubarao.jpg);
+    background-image: url(../assets/background-parallax/praia-parallax.png);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     opacity: 0.94;
 
-    #content-objetivos {
+    #content-objetivo {
         @include mixins.margem-central(80%);
         height: 100%;
         @include mixins.flex-col();
@@ -22,12 +23,11 @@
         justify-content: center;
 
         h1 {
-            @include mixins.ff-fs-cl(var.$text-t, 3rem, var.$cor-5, 700);
+            @include mixins.ff-fs-cl(var.$text-t, 3rem, var.$cor-4, 700);
             text-align: center;
             text-transform: uppercase;
             margin: 0;
             padding: 0;
-            text-shadow: 0px 0px 14px var.$cor-2;
         }
 
         p {
@@ -37,9 +37,12 @@
     }
 }
 
+
+// Responsividade
+// Tablet
 @media only screen and (max-width:800px) {
-    #objetivos {
-        #content-objetivos {
+    #objetivo {
+        #content-objetivo {
             h1 {
                 font-size: 2rem;
             }

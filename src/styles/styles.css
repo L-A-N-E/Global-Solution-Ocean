@@ -408,17 +408,17 @@ header .margin-header #nav-mobile ul li a:hover::after {
     text-align: center;
   }
 }
-#objetivos {
+#objetivo {
   width: 100vw;
   height: 500px;
   position: relative;
-  background-image: url(../assets/animais/tubarao.jpg);
+  background-image: url(../assets/background-parallax/praia-parallax.png);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   opacity: 0.94;
 }
-#objetivos #content-objetivos {
+#objetivo #content-objetivo {
   width: 80%;
   margin: 0 auto;
   height: 100%;
@@ -427,18 +427,17 @@ header .margin-header #nav-mobile ul li a:hover::after {
   align-items: center;
   justify-content: center;
 }
-#objetivos #content-objetivos h1 {
+#objetivo #content-objetivo h1 {
   font-family: "Freeman", sans-serif;
   font-size: 3rem;
-  color: #D8E6F2;
+  color: #ADC5D9;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   margin: 0;
   padding: 0;
-  text-shadow: 0px 0px 14px #024959;
 }
-#objetivos #content-objetivos p {
+#objetivo #content-objetivo p {
   font-family: "Monteserrat", sans-serif;
   font-size: 1rem;
   color: #fff;
@@ -447,7 +446,7 @@ header .margin-header #nav-mobile ul li a:hover::after {
 }
 
 @media only screen and (max-width: 800px) {
-  #objetivos #content-objetivos h1 {
+  #objetivo #content-objetivo h1 {
     font-size: 2rem;
   }
 }/*# sourceMappingURL=styles.css.map */

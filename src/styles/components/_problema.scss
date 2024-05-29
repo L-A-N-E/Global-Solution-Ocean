@@ -22,6 +22,7 @@
             flex: 1;
             @include mixins.flex-col();
             justify-content: center;
+            
             h1 {
                 @include mixins.ff-fs-cl(var.$text-t, 3rem, var.$cor-2, 900);
                 text-transform: uppercase;
