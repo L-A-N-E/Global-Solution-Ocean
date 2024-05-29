@@ -27,12 +27,22 @@
             text-transform: uppercase;
             margin: 0;
             padding: 0;
-            text-shadow: 0px 0px 14px #0000006b;
+            text-shadow: 0px 0px 14px var.$cor-2;
         }
 
         p {
-            @include mixins.ff-fs-cl(var.$text-p, 1rem, var.$cor-5, 400);
+            @include mixins.ff-fs-cl(var.$text-p, 1rem, var.$cor-branca, 400);
             text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width:800px) {
+    #objetivos {
+        #content-objetivos {
+            h1 {
+                font-size: 2rem;
+            }
         }
     }
 }
