@@ -7,5 +7,32 @@
 #objetivos {
     width: 100vw;
     height: 500px;
-    background-color: var.$cor-4;
+    position: relative;
+    background-image: url(../assets/animais/tubarao.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.94;
+
+    #content-objetivos {
+        @include mixins.margem-central(80%);
+        height: 100%;
+        @include mixins.flex-col();
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            @include mixins.ff-fs-cl(var.$text-t, 3rem, var.$cor-5, 700);
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 0;
+            text-shadow: 0px 0px 14px #0000006b;
+        }
+
+        p {
+            @include mixins.ff-fs-cl(var.$text-p, 1rem, var.$cor-5, 400);
+            text-align: center;
+        }
+    }
 }
