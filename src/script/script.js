@@ -48,8 +48,8 @@ window.addEventListener('scroll', function() {
 });
 
 
-// SEÇÃO TECNOLOGIA
-// Declarando Variaveis para Slide 
+// SEÇÃO TECNOLOGIA UTILIZADA
+// Variaveis Tecnologia 
 let imagens = ['../src/assets/tecnologias/html.png', '../src/assets/tecnologias/css.png', '../src/assets/tecnologias/js.png', '../src/assets/tecnologias/c++.png' , '../src/assets/tecnologias/py.png'];
 let index = 0;
 let time = 5000;
@@ -72,7 +72,7 @@ function slideTecnologias() {
 slideTecnologias();
 
 
-// Seção Público
+// SEÇÃO PUBLICO ALVO
 
 // Modal Animais
 // Abrir Modal Animais Marinhos
