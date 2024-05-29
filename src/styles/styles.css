@@ -31,6 +31,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -313,7 +314,7 @@ header .margin-header #nav-mobile ul li a:hover::after {
 @media only screen and (max-width: 800px) {
   #problema {
     display: flex;
-    height: 70vh;
+    height: calc(700px - 2%);
   }
   #problema #content-problema {
     flex-direction: column;
@@ -336,7 +337,7 @@ header .margin-header #nav-mobile ul li a:hover::after {
 }
 #tecnologias {
   width: 100vw;
-  height: 600px;
+  height: 500px;
   background-color: #024959;
   display: flex;
 }
@@ -386,41 +387,38 @@ header .margin-header #nav-mobile ul li a:hover::after {
 }
 
 @media only screen and (max-width: 840px) {
-  #tecnologia {
+  #tecnologias {
     height: auto;
   }
-  #tecnologia #content-tecnologia {
+  #tecnologias #content-tecnologia {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
   }
-  #tecnologia #content-tecnologia #banner-tec {
-    height: 40%;
-  }
-  #tecnologia #content-tecnologia #titulo-tec {
+  #tecnologias #content-tecnologia #titulo-tec {
     width: auto;
     display: flex;
     align-items: center;
   }
-  #tecnologia #content-tecnologia #titulo-tec h1 {
+  #tecnologias #content-tecnologia #titulo-tec h1 {
     font-size: 2rem;
     text-align: center;
   }
-  #tecnologia #content-tecnologia #titulo-tec p {
+  #tecnologias #content-tecnologia #titulo-tec p {
     text-align: center;
   }
 }
 @media only screen and (max-width: 300px) {
-  #tecnologia #content-tecnologia #titulo-tec h1 {
+  #tecnologias #content-tecnologia #titulo-tec h1 {
     font-size: 2rem;
     text-align: center;
   }
-  #tecnologia #content-tecnologia #titulo-tec p {
+  #tecnologias #content-tecnologia #titulo-tec p {
     font-size: 1rem;
   }
 }
 #objetivos {
   width: 100vw;
-  height: 600px;
+  height: 500px;
   background-color: #ADC5D9;
 }/*# sourceMappingURL=styles.css.map */

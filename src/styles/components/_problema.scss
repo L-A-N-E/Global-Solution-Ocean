@@ -60,7 +60,7 @@
 @media only screen and (max-width:800px) {
     #problema {
         display: flex;
-        height: 70vh;
+        height: calc(700px - 2%);
         
         #content-problema {
             flex-direction: column;

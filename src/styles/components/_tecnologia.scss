@@ -7,7 +7,7 @@
 // Estilizando Seção Tecnologia
 #tecnologias {
     width: 100vw;
-    height: 600px;
+    height: 500px;
     background-color: var.$cor-2;
     display: flex;
 
@@ -57,16 +57,12 @@
 // Responsividade
 // Tablet
 @media only screen and (max-width:840px){
-    #tecnologia {
+    #tecnologias {
         height: auto;
 
         #content-tecnologia {   
             @include mixins.flex-col();
             justify-content: space-evenly;
-
-            #banner-tec {
-                height: 40%;
-            }
 
             #titulo-tec{
                 width: auto;
@@ -86,7 +82,7 @@
 
 // Mobile
 @media only screen and (max-width:300px) {
-    #tecnologia {
+    #tecnologias {
         #content-tecnologia {  
             
             #titulo-tec{
