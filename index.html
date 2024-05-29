@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Solution</title>
+    <title>Global Solution</title>  
     <link rel="stylesheet" href="src/styles/styles.css">
 
     <!-- Fonte Freeman -->
@@ -30,31 +30,46 @@
                 <!-- Desktop -->
                 <nav id="nav-desktop">
                     <ul>
+                        <!-- Home -->
                         <li><a href="#">Home</a></li>
+                        <!-- Seção Problema -->
                         <li><a href="index.html#problema">Problema</a></li>
-                        <li><a href="index.html#tecnologia">Tecnologia</a></li>
+                        <!-- Seção Tecnologias Utilizadas -->
+                        <li><a href="index.html#tecnologias">Tecnologias</a></li>
+                        <!-- Seção Objetivos -->
                         <li><a href="index.html#objetivos">Objetivos</a></li>
+                        <!-- Seção Público -->
                         <li><a href="index.html#publico">Público</a></li>
+                        <!-- Seção Benefícios -->
                         <li><a href="index.html#beneficios">Benefícios</a></li>
+                        <!-- Seção Dia a Dia -->
                         <li><a href="index.html#dia-a-dia">Dia-a-Dia</a></li>
                     </ul>
                 </nav>
                 <!-- Bnt Abrir Menu -->
                 <div class="btn-abrir-menu" onclick="abrirMenu()" >
-                    <img src="src/assets/open-menu.svg" alt="">
+                    <img src="src/assets/menu/open-menu.svg" alt="">
                 </div>
                 
                 <!-- Mobile -->
                 <nav id="nav-mobile">
                     <ul>
-                        <li onclick="fecharMenu()"><img src="src/assets/close-menu.svg" alt=""></li>
+                        <!-- Btn Fechar Menu -->
+                        <li onclick="fecharMenu()"><img src="src/assets/menu/close-menu.svg" alt=""></li>
+                        <!-- Home -->
                         <li onclick="fecharMenu()"><a href="#">Home</a></li>
+                        <!-- Seção Problema -->
                         <li onclick="fecharMenu()"><a href="index.html#problema">Problema</a></li>
-                        <li onclick="fecharMenu()"><a href="index.html#tecnologia">Tecnologia</a></li>
+                        <!-- Seção Tecnologias Utilizadas -->
+                        <li onclick="fecharMenu()"><a href="index.html#tecnologias">Tecnologias</a></li>
+                        <!-- Seção Objetivos -->
                         <li onclick="fecharMenu()"><a href="index.html#objetivos">Objetivos</a></li>
+                        <!-- Seção Público -->
                         <li onclick="fecharMenu()"><a href="index.html#publico">Público</a></li>
+                        <!-- Seção Benefícios -->
                         <li onclick="fecharMenu()"><a href="index.html#beneficios">Benefícios</a></li>
-                        <li onclick="fecharMenu()"><a href="index.html#dia-a-dia">Dia- a-Dia</a></li>
+                        <!-- Seção Dia a Dia -->
+                        <li onclick="fecharMenu()"><a href="index.html#dia-a-dia">Dia-a-Dia</a></li>
                     </ul>
                 </nav>
 
@@ -86,20 +101,20 @@
 
                 <!-- Direita -->
                 <div id="right-problema">
-                    <img class="hidden-right-to-left" src="src/assets/tartaruga.png" alt="">
+                    <img class="hidden-right-to-left" src="src/assets/animais/tartaruga.png" alt="">
                 </div>
             </div>
         </section>
 
         <!-- Seção 2 Tecnologia Utilizada  -->
-        <section id="tecnologia">
+        <section id="tecnologias">
             <div id="content-tecnologia">
-                <!-- Esquerda -->
-                <div id="banner-tec" class="hidden-left-to-right">
-                    <img id="img-banner" src="" alt="">
+                <!-- Slide das Tecnologias -->
+                <div id="slide-tec" class="hidden-left-to-right">
+                    <img id="img-tec" src="" alt="">
                 </div>
 
-                <!-- Direita-->
+                <!-- Informações-->
                 <div id="titulo-tec">
                     <h1>Tecnologias <strong class="blue">Utilizadas</strong></h1>
                     <p>Html 5 | Css 3 | JavaScript | C++ | Python</p>
@@ -108,7 +123,9 @@
         </section>
 
         <!-- Seção 3 Objetivos  -->
-        <section id="objetivos"></section>
+        <section id="objetivos">
+            
+        </section>
 
         <!-- Seção 4 Público -->
         <section id="publico"></section>
@@ -123,6 +140,7 @@
         <footer></footer>
     </main>
 
+    <!-- Script -->
     <script src="src/script/script.js"></script>
 </body>
 </html>

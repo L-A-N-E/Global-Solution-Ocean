@@ -1,0 +1,11 @@
+// Variaveis
+@use '../abstract/var';
+
+// Mixins
+@use '../abstract/mixins';
+
+#objetivos {
+    width: 100vw;
+    height: 600px;
+    background-color: var.$cor-4;
+}

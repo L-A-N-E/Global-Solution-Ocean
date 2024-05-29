@@ -4,6 +4,11 @@
     margin: 0 auto;
 }
 
+@mixin margem-horizontal(){
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 @mixin ff-fs-cl ($f-family, $f-size, $f-color, $f-weight){
     font-family: $f-family;
     font-size: $f-size;
@@ -11,12 +16,15 @@
     font-weight: $f-weight;
 }
 
-
 @mixin animacao-entrada (){
     opacity: 0;
     filter: blur(5px);
     transition: all 2s;
 }
 
+@mixin flex-col (){
+    display: flex;
+    flex-direction: column;
+}
 
 

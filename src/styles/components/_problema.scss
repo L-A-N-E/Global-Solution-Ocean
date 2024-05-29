@@ -8,23 +8,19 @@
 #problema {
     height: 60vh;
     background-color: var.$cor-5;
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
 
     #content-problema {
         @include mixins.margem-central(80%);
         align-items: center;
         height: 100%;
         display: flex;
+        gap: 1rem;
 
         #left-problema {
             height: 100%;
             width: 50%;
-            display: flex;
-            gap: 2rem;
             flex: 1;
-            flex-direction: column;
+            @include mixins.flex-col();
             justify-content: center;
             h1 {
                 @include mixins.ff-fs-cl(var.$text-t, 3rem, var.$cor-2, 900);
@@ -64,14 +60,15 @@
 @media only screen and (max-width:800px) {
     #problema {
         display: flex;
-        height: auto;
+        height: 70vh;
         
         #content-problema {
             flex-direction: column;
+            justify-content: space-evenly;
             gap: 2rem;
 
             #left-problema {
-                margin-top: 1rem;
+                margin-top: 2rem;
                 text-align: center;
                 width: 100%;
                 gap: 0.5rem;

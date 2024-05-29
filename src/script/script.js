@@ -52,18 +52,18 @@ let index = 0;
 let time = 5000;
 
 // Função Slide
-function slideShow() {
-    document.getElementById('img-banner').style.opacity = '0';
+function slideTecnologias() {
+    document.getElementById('img-tec').style.opacity = '0';
     setTimeout(function() {
-        document.getElementById('img-banner').src = imagens[index];
+        document.getElementById('img-tec').src = imagens[index];
         index++;
 
         if (index == imagens.length) {
             index = 0;
         }
 
-        document.getElementById('img-banner').style.opacity = '1';
+        document.getElementById('img-tec').style.opacity = '1';
     }, 200);
-    setTimeout(slideShow, time);
+    setTimeout(slideTecnologias, time);
 }
-slideShow();
+slideTecnologias();

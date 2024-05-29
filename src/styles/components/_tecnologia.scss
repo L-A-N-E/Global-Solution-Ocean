@@ -5,7 +5,7 @@
 @use '../abstract/mixins';
 
 // Estilizando Seção Tecnologia
-#tecnologia {
+#tecnologias {
     width: 100vw;
     height: 600px;
     background-color: var.$cor-2;
@@ -13,15 +13,16 @@
 
     #content-tecnologia {
         @include mixins.margem-central(80%);
+        @include mixins.margem-horizontal();
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        #banner-tec {
+        #slide-tec {
             width: auto;
             height: 70%;
 
-            #img-banner {
+            #img-tec {
                 height: 100%;
                 transition: opacity 0.5s ease;
                 width: 100%;
@@ -30,8 +31,7 @@
 
         #titulo-tec {
             width: 40%;
-            display: flex;
-            flex-direction: column;
+            @include mixins.flex-col();
             align-items: end;
 
             h1 {
@@ -61,7 +61,7 @@
         height: auto;
 
         #content-tecnologia {   
-            flex-direction: column;
+            @include mixins.flex-col();
             justify-content: space-evenly;
 
             #banner-tec {
