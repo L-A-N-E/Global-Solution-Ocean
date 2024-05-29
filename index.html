@@ -130,24 +130,26 @@
             </div>
         </section>
         
-        <!-- Seção 1 Problema -->
-        <section id="problema">
-            <div id="content-problema">
-                <!-- Esquerda -->
-                <div id="left-problema">
-                    <h1>O Problema nos oceanos</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum delectus totam, cum iste non ad, magnam, ipsa vitae ducimus quisquam libero dolorem adipisci. Vitae sed maxime totam est repudiandae amet.</p>
-                </div>
-
-                <!-- Direita -->
-                <div id="right-problema">
-                    <img class="hidden-right-to-left" src="src/assets/animais/tartaruga.png" alt="">
-                </div>
-            </div>
-        </section>
-        
         <!-- Seção 4 Público -->
-        <section id="publico"></section>
+        <section id="publico">
+                <div id="content-publico">
+                    <!-- Animais Marinhos -->
+                    <div id="animais" onclick="openModalAnimais()">
+                    </div>
+                    
+                    <!-- Modal 1 -->
+                    <div id="modal-animal" onclick="closeModaAnimais()">
+                        <h1>Público Alvo <br> Animais Marinhos</h1>
+                    </div>
+                    <!-- Humanos -->
+                    <div id="seres-humanos" onclick="openModaHumano()">
+                    </div>
+                    <!-- Modal 2 -->
+                    <div id="modal-humano" onclick="closeModaHumano()">
+                        <h1>Público Alvo <br> Seres-Humanos</h1>
+                    </div>
+                </div>
+        </section>
 
         <!-- Seção 5 Beneficios -->
         <section id="beneficios"></section>

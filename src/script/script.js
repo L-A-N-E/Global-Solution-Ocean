@@ -1,15 +1,18 @@
 // ELEMENTOS
 // Animação de Entrada com a class Hidden
-const observer = new IntersectionObserver((entries)=>{
-    entries.forEach((entry)=>{
-        console.log(entry)
-        if(entry.isIntersecting){
-            entry.target.classList.add('show');
-        }
-    })
-})
-const hiddenElemente = document.querySelectorAll(".hidden-right-to-left, .hidden-left-to-right");
-hiddenElemente.forEach((el)=> observer.observe(el));
+document.addEventListener('DOMContentLoaded', function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry);
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    });
+
+    const hiddenElements = document.querySelectorAll(".hidden-right-to-left, .hidden-left-to-right");
+    hiddenElements.forEach((el) => observer.observe(el));
+});
 
 
 // HEADER
@@ -67,3 +70,56 @@ function slideTecnologias() {
     setTimeout(slideTecnologias, time);
 }
 slideTecnologias();
+
+
+// Seção Público
+
+// Modal Animais
+// Abrir Modal Animais Marinhos
+function openModalAnimais() {
+    const openAnimais = document.getElementById('modal-animal');
+    openAnimais.style.display = 'flex';
+
+    const closeDivAnimais = document.getElementById('animais');
+    closeDivAnimais.style.display = 'none'; 
+
+    const closeDivHumano = document.getElementById('seres-humanos');
+    closeDivHumano.style.display = 'none';
+}
+
+// Fechar Modal Animais Marinhos
+function closeModaAnimais() {
+    const closeAnimais = document.getElementById('modal-animal');
+    closeAnimais.style.display = 'none';
+
+    const seeDivAnimais = document.getElementById('animais');
+    seeDivAnimais.style.display = 'flex'; 
+
+    const seeDivHumano = document.getElementById('seres-humanos');
+    seeDivHumano.style.display = 'flex';
+}
+
+// Modal Seres Humanos
+// Abrir Modal Seres Humanos
+function openModaHumano() {
+    const openAnimais = document.getElementById('modal-humano');
+    openAnimais.style.display = 'flex';
+
+    const closeDivAnimais = document.getElementById('animais');
+    closeDivAnimais.style.display = 'none'; 
+
+    const closeDivHumano = document.getElementById('seres-humanos');
+    closeDivHumano.style.display = 'none';
+}
+
+// Fechar Modal Seres Humanos
+function closeModaHumano() {
+    const closeAnimais = document.getElementById('modal-humano');
+    closeAnimais.style.display = 'none';
+
+    const seeDivAnimais = document.getElementById('animais');
+    seeDivAnimais.style.display = 'flex'; 
+
+    const seeDivHumano = document.getElementById('seres-humanos');
+    seeDivHumano.style.display = 'flex';
+}
