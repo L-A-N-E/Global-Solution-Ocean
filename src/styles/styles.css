@@ -448,7 +448,7 @@ header .margin-header #nav-mobile ul li a:hover::after {
 #publico #content-publico {
   width: 100vw;
   height: 500px;
-  background-color: #000;
+  background-color: #012E40;
   display: flex;
 }
 #publico #content-publico .nome-publico {
@@ -466,6 +466,7 @@ header .margin-header #nav-mobile ul li a:hover::after {
   transition: ease-in all 1s;
   cursor: pointer;
   align-items: center;
+  justify-content: center;
   opacity: 0.3;
 }
 #publico #content-publico #animais:hover {
@@ -500,6 +501,8 @@ header .margin-header #nav-mobile ul li a:hover::after {
   background-image: url(../assets/publico/humano.png);
   background-position: center;
   background-size: cover;
+  align-items: center;
+  justify-content: center;
   transition: ease-in all 1s;
   cursor: pointer;
   opacity: 0.3;
@@ -569,4 +572,9 @@ header .margin-header #nav-mobile ul li a:hover::after {
     text-align: start;
     text-shadow: 0 0 50px #000;
   }
+}
+#beneficios {
+  width: 100vw;
+  height: 500px;
+  background-color: #ADC5D9;
 }/*# sourceMappingURL=styles.css.map */

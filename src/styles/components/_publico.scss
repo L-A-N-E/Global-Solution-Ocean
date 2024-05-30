@@ -10,7 +10,7 @@
     #content-publico {
         width: 100vw;
         height: 500px;
-        background-color: var.$cor-preta;
+        background-color: var.$cor-1;
         display: flex;
 
         // Classe Nome Publico
@@ -31,8 +31,8 @@
             transition: ease-in all 1s;
             cursor: pointer;
             align-items: center;
+            justify-content: center;
             opacity: 0.3;
-    
         }
     
         // Efeito Hover Animais
@@ -70,10 +70,12 @@
             background-image: url(../assets/publico/humano.png);
             background-position: center;
             background-size: cover;
+            align-items: center;
+            justify-content: center;
             transition: ease-in all 1s;
             cursor: pointer;
             opacity: 0.3;
-            
+        
         }
     
         // Efeito Hover Seres Humanos

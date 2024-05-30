@@ -1,0 +1,12 @@
+// Variaveis
+@use '../abstract/var';
+
+// Mixins
+@use '../abstract/mixins';
+
+// Estilizando Seção Benefícios
+#beneficios {
+    width: 100vw;
+    height: 500px;
+    background-color: var.$cor-4;
+}
