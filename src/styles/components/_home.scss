@@ -6,13 +6,14 @@
 
 // Estilização do Home
 #home {
-    cursor: url('') 0 0, auto;
+    // Dimensoes e Ajustes do Home
     .video-background-section {
         position: relative;
         height: 100vh;
         width: 100%;
         overflow: hidden;
 
+        // Background
         #background-video {
             position: absolute;
             top: 50%;
@@ -24,7 +25,8 @@
             z-index: -1;
         }
 
-        .content {
+        // Conteudo Principal
+        #content-home {
             @include mixins.margem-central(80%);
             position: relative;
             z-index: 1;

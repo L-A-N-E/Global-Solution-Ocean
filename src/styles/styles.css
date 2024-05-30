@@ -2,15 +2,15 @@
   color: #ADC5D9;
 }
 
-.hidden-right-to-left {
-  transform: translateX(100%);
+.hidden-left-to-right {
+  transform: translateX(-100%);
   opacity: 0;
   filter: blur(5px);
   transition: all 2s;
 }
 
-.hidden-left-to-right {
-  transform: translateX(-100%);
+.hidden-right-to-left {
+  transform: translateX(100%);
   opacity: 0;
   filter: blur(5px);
   transition: all 2s;
@@ -215,9 +215,6 @@ header .margin-header #nav-mobile ul li a:hover::after {
     align-items: center;
   }
 }
-#home {
-  cursor: url("") 0 0, auto;
-}
 #home .video-background-section {
   position: relative;
   height: 100vh;
@@ -235,7 +232,7 @@ header .margin-header #nav-mobile ul li a:hover::after {
   transform: translate(-50%, -50%);
   z-index: -1;
 }
-#home .video-background-section .content {
+#home .video-background-section #content-home {
   width: 80%;
   margin: 0 auto;
   position: relative;
@@ -245,7 +242,7 @@ header .margin-header #nav-mobile ul li a:hover::after {
   top: 50%;
   transform: translateY(-50%);
 }
-#home .video-background-section .content h1 {
+#home .video-background-section #content-home h1 {
   font-family: "Freeman", sans-serif;
   font-size: 3rem;
   color: #fff;
@@ -454,6 +451,11 @@ header .margin-header #nav-mobile ul li a:hover::after {
   background-color: #000;
   display: flex;
 }
+#publico #content-publico .nome-publico {
+  color: #ADC5D9;
+  font-size: 2rem;
+  font-weight: 500;
+}
 #publico #content-publico #animais {
   display: flex;
   width: 50%;
@@ -534,13 +536,13 @@ header .margin-header #nav-mobile ul li a:hover::after {
     flex-wrap: wrap;
     height: auto;
   }
+  #publico #content-publico .nome-publico {
+    font-size: 1.3rem;
+  }
   #publico #content-publico #animais {
     height: 200px;
     width: 100%;
     opacity: 0.7;
-  }
-  #publico #content-publico #animais:hover {
-    display: none;
   }
   #publico #content-publico #modal-animal {
     height: 400px;
@@ -556,9 +558,6 @@ header .margin-header #nav-mobile ul li a:hover::after {
     opacity: 0.7;
     height: 200px;
     width: 100%;
-  }
-  #publico #content-publico #seres-humanos:hover {
-    display: none;
   }
   #publico #content-publico #modal-humano {
     height: 400px;

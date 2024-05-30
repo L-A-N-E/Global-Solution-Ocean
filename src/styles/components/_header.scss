@@ -14,7 +14,7 @@ header {
     top: 0;
     transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 
-
+    // Conteudo Header
     .margin-header {
         height: 70px;
         @include mixins.margem-central(90%);
@@ -28,6 +28,7 @@ header {
             padding: 0;
         }
 
+        // Desktop
         #nav-desktop {
             display: inline-flex;
             align-items: center;
@@ -68,11 +69,13 @@ header {
             }
         }
 
+        // Btn Abrir Menu
         .btn-abrir-menu {
             display: none;
             cursor: pointer;
         }
 
+        // Mobile
         #nav-mobile {
             display: none;
             width: calc(40vw + 10%);
@@ -163,10 +166,12 @@ header {
 @media only screen and (max-width:840px){
     header {
         .margin-header {
+            // Desktop
             #nav-desktop {
                 display: none;
             }
 
+            // Btn Abrir Menu
             .btn-abrir-menu {
                 display: flex;
             }
@@ -178,6 +183,7 @@ header {
 @media only screen and (max-width:300px){
     header {
         .margin-header {
+            // Mobile
             #nav-mobile {
                 width: 100vw;
                 border-radius: 0;

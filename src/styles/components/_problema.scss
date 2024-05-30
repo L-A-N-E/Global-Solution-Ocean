@@ -9,6 +9,7 @@
     height: 500px;
     background-color: var.$cor-5;
 
+    // Conteudo Principal
     #content-problema {
         @include mixins.margem-central(80%);
         align-items: center;
@@ -16,6 +17,7 @@
         display: flex;
         gap: 1rem;
 
+        // Div Esquerda
         #left-problema {
             height: 100%;
             width: 50%;
@@ -39,6 +41,7 @@
             }
         }
 
+        // Div Direita
         #right-problema {
             width: 50%;
             height: 100%;
@@ -56,18 +59,22 @@
     }
 }
 
-// Responsividade
+// RESPONSIVIADE
+
 // Tablet
 @media only screen and (max-width:800px) {
+    // Seção Problema
     #problema {
         display: flex;
         height: calc(700px - 2%);
         
+        // Conteudo Principal
         #content-problema {
             flex-direction: column;
             justify-content: space-evenly;
             gap: 2rem;
 
+            // Div Esquerda
             #left-problema {
                 margin-top: 2rem;
                 text-align: center;
@@ -80,6 +87,7 @@
                 }
             }
 
+            // Div Direita 
             #right-problema {
                 width: 100%;
             }

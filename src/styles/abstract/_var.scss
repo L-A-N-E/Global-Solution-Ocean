@@ -1,3 +1,4 @@
+// Mixins
 @use 'mixins';
 
 // Cores
@@ -10,10 +11,6 @@ $cor-branca: #fff;
 $cor-preta: #000;
 $cor-bg-nav-mobile: #d3d3d311;
 
-// Gradientes
-$gradiente-1: linear-gradiente(180deg, $cor-1 0%, $cor-2 86.78%);
-$gradiente-2: linear-gradiente(180deg, $cor-4 0%, $cor-3 86.78%);
-
 // Texto
 $text-p: 'Monteserrat', sans-serif;
 $text-t: 'Freeman', sans-serif;
@@ -23,17 +20,21 @@ $text-t: 'Freeman', sans-serif;
     color: $cor-4;
 }
 
-// Efeito
-.hidden-right-to-left{
-    transform: translateX(100%);
-    @include mixins.animacao-entrada()
-}
-
+// Efeito de Entrada
+// Entrada ---->
 .hidden-left-to-right{
     transform: translateX(-100%);
     @include mixins.animacao-entrada()
 }
 
+// <---- Entrada
+.hidden-right-to-left{
+    transform: translateX(100%);
+    @include mixins.animacao-entrada()
+}
+
+
+// Efeito Aplicado após Scroll
 .show{
     opacity: 1;
     filter: blur(0px);

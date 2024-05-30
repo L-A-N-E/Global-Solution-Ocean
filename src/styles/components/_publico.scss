@@ -6,11 +6,19 @@
 
 // Estilizando Seção Público
 #publico {
+    // Conteudo Principal
     #content-publico {
         width: 100vw;
         height: 500px;
         background-color: var.$cor-preta;
         display: flex;
+
+        // Classe Nome Publico
+        .nome-publico {
+            color: var.$cor-4;
+            font-size: 2rem;
+            font-weight: 500;
+        }
     
         // Div Animais
         #animais {
@@ -44,7 +52,6 @@
             background-position: center;
             background-size: cover;
             align-items: center;
-    
     
             h1 {
                 @include mixins.margem-central(80%);
@@ -85,7 +92,7 @@
             background-position: center;
             background-size: cover;
             align-items: center;
-    
+
             h1 {
                 @include mixins.margem-central(80%);
                 @include mixins.ff-fs-cl(var.$text-t, 3rem, var.$cor-5, 300);
@@ -97,25 +104,28 @@
     }
 }
 
-// Responsividade
+// RESPONSIVIDADE
+
 // Tablet   
 @media only screen and (max-width:840px) {
+    // Seção Público
     #publico {
+        // Conteudo Principal
         #content-publico {
             flex-direction: column;
             flex-wrap: wrap;
             height: auto;
     
+            // Classe Nome Publico
+            .nome-publico {
+                font-size: 1.3rem;
+            }
+
             // Div Animais
             #animais {
                 height: 200px;
                 width: 100%;
                 opacity: 0.7;
-            }
-    
-            // Efeito Hover Animais
-            #animais:hover{
-                display: none;
             }
     
             // Modal Animais
@@ -136,12 +146,7 @@
                 height: 200px;
                 width: 100%;
             }
-    
-            // Efeito Hover Humanos
-            #seres-humanos:hover{
-                display: none;
-            }
-    
+
             // Modal Seres Humanos
             #modal-humano {
                 height: 400px;
