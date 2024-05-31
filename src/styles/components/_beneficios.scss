@@ -8,7 +8,7 @@
 #beneficios {
     width: 100vw;
     height: 500px;
-    background-color: var.$cor-4;
+    background-color: var.$cor-5;
 
     #content-beneficios {
         @include mixins.margem-central(80%);
@@ -19,48 +19,37 @@
         align-items: center;
 
         #left-beneficios {
-            background-image: url(../assets/beneficios/1.png);
-            background-position: center;
-            background-size: cover;
-            width: 33%;
+            width: 50%;
             height: 90%;
-            }
+            @include mixins.flex-col();
+            align-items: start;
+            justify-content: center;
 
-        #center-beneficios {
-            background-image: url(../assets/beneficios/2.png);
-            background-position: center;
-            background-size: cover;
-            width: 33%;
-            height: 90%;
-        }
-
-        #right-beneficios {
-            background-image: url(../assets/beneficios/3.png);
-            background-position: center;
-            background-size: cover;
-            width: 33%;
-            height: 90%;
-            }
-
-        .card-beneficios {
-            border-radius: 0.5rem;
-            @include mixins.flex-col;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem;
-            text-align: center;
             h1 {
-                @include mixins.ff-fs-cl(var.$text-t, 2.5rem, var.$cor-branca, 900);
+                text-align: start;
+                @include mixins.ff-fs-cl(var.$text-t, 3rem, var.$cor-2, 900);
                 text-transform: uppercase;
                 margin: 0;
                 padding: 0;
             }
 
             p {
-                @include mixins.ff-fs-cl(var.$text-p, 1rem, var.$cor-branca, 400);
-                text-transform: uppercase;
+                @include mixins.ff-fs-cl(var.$text-p, 1rem, var.$cor-1, 400);
+                text-align: justify;
                 margin: 0;
                 padding: 0;
+            }
+        }
+
+        #right-beneficios {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            width: 50%;
+            height: 90%;
+            
+            img {
+                height: 90%;
             }
         }
     }
@@ -75,23 +64,6 @@
         #content-beneficios {
             @include mixins.flex-col;
             gap: 2rem;
-
-            #left-beneficios {
-                width: 100%;
-                height: 100%;
-                margin-top: 2rem;
-            }
-
-            #center-beneficios {
-                width: 100%;
-                height: 100%;
-            }
-
-            #right-beneficios {
-                width: 100%;
-                height: 100%;
-                margin-bottom: 2rem;
-            }
         }
     }
 }
