@@ -666,4 +666,12 @@ header .margin-header #nav-mobile ul li a:hover::after {
   #beneficios #content-beneficios #right-beneficios img {
     width: 90%;
   }
+}
+#img {
+  height: 50vh;
+  width: 100vw;
+  background-image: url(../assets/dia-a-dia/bg.png);
+  background-position: center;
+  background-size: cover;
+  background-color: #D8E6F2;
 }/*# sourceMappingURL=styles.css.map */

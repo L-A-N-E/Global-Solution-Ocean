@@ -1,0 +1,15 @@
+// Variaveis
+@use '../abstract/var';
+
+// Mixins
+@use '../abstract/mixins';
+
+// Estilizando Transição para outra seção
+#img {
+    height: 50vh;
+    width: 100vw;
+    background-image: url(../assets/dia-a-dia/bg.png);
+    background-position: center;
+    background-size: cover;
+    background-color: var.$cor-5;
+}
