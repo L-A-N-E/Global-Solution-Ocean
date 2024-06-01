@@ -1,0 +1,105 @@
+// Variaveis
+@use '../abstract/var';
+
+// Mixins
+@use '../abstract/mixins';
+
+// Estilizando Seção Dia a Dia
+#dia-a-dia {
+    height: 500px;
+    width: 100vw;
+    background-color: var.$cor-5;
+
+    // Conteudo Principal
+    #content-dia-a-dia {
+        @include mixins.margem-central(80%);
+        display: flex;
+        justify-content: space-between;
+        height: auto;
+
+        // Esquerda
+        #left-dia {
+            width: 50%;
+            height: auto;
+            display: flex;
+            align-items: center;
+
+            // Organizar Informações
+            #info-dia {
+                h1 {
+                    text-align: start;
+                    @include mixins.ff-fs-cl(var.$text-t, 3rem, var.$cor-3, 900);
+                    text-transform: uppercase;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .cor-1 {
+                    color: var.$cor-1;
+                }
+    
+                p {
+                    @include mixins.ff-fs-cl(var.$text-p, 1rem, var.$cor-1, 400);
+                    text-align: justify;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+
+        // Direita
+        #right-dia {
+            width: 30%;
+            display: flex;
+            justify-content: end;
+
+            #img-dia-a-dia {
+                height: 90%;
+            }
+        }
+    }
+}
+
+// RESPONSIVIDADE
+
+// Tablet
+@media only screen and (max-width:800px) {
+    #dia-a-dia {
+        height: auto;
+        // Conteudo Principal
+        #content-dia-a-dia {
+            @include mixins.flex-col();
+            gap: 1rem;
+
+            // Esquerda
+            #left-dia {
+                display: flex;
+                margin-top: 2rem;
+                width: 100%;
+                justify-content: center;
+                
+                // Organizar Informações
+                #info-dia {
+                    h1 {
+                        font-size: 2rem;
+                        text-align: center;
+                    }
+
+                    p {
+                        text-align: center;
+                    }
+                }
+            }
+
+            // Direita
+            #right-dia {
+                width: 100%;
+                justify-content: center;
+                
+                #img-dia-a-dia {
+                    width: 90%;
+                }
+            }
+        }
+    }
+}

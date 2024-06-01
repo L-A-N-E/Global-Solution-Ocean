@@ -644,7 +644,6 @@ header .margin-header #nav-mobile ul li a:hover::after {
     justify-content: center;
   }
   #beneficios #content-beneficios #left-beneficios {
-    height: 8rem;
     width: 90%;
     margin: 0 auto;
     align-items: center;
@@ -674,4 +673,84 @@ header .margin-header #nav-mobile ul li a:hover::after {
   background-position: center;
   background-size: cover;
   background-color: #D8E6F2;
+}
+
+#dia-a-dia {
+  height: 500px;
+  width: 100vw;
+  background-color: #D8E6F2;
+}
+#dia-a-dia #content-dia-a-dia {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+}
+#dia-a-dia #content-dia-a-dia #left-dia {
+  width: 50%;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+#dia-a-dia #content-dia-a-dia #left-dia #info-dia h1 {
+  text-align: start;
+  font-family: "Freeman", sans-serif;
+  font-size: 3rem;
+  color: #4E8DA6;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+#dia-a-dia #content-dia-a-dia #left-dia #info-dia .cor-1 {
+  color: #012E40;
+}
+#dia-a-dia #content-dia-a-dia #left-dia #info-dia p {
+  font-family: "Monteserrat", sans-serif;
+  font-size: 1rem;
+  color: #012E40;
+  font-weight: 400;
+  text-align: justify;
+  margin: 0;
+  padding: 0;
+}
+#dia-a-dia #content-dia-a-dia #right-dia {
+  width: 30%;
+  display: flex;
+  justify-content: end;
+}
+#dia-a-dia #content-dia-a-dia #right-dia #img-dia-a-dia {
+  height: 90%;
+}
+
+@media only screen and (max-width: 800px) {
+  #dia-a-dia {
+    height: auto;
+  }
+  #dia-a-dia #content-dia-a-dia {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #dia-a-dia #content-dia-a-dia #left-dia {
+    display: flex;
+    margin-top: 2rem;
+    width: 100%;
+    justify-content: center;
+  }
+  #dia-a-dia #content-dia-a-dia #left-dia #info-dia h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  #dia-a-dia #content-dia-a-dia #left-dia #info-dia p {
+    text-align: center;
+  }
+  #dia-a-dia #content-dia-a-dia #right-dia {
+    width: 100%;
+    justify-content: center;
+  }
+  #dia-a-dia #content-dia-a-dia #right-dia #img-dia-a-dia {
+    width: 90%;
+  }
 }/*# sourceMappingURL=styles.css.map */

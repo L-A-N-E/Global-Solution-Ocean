@@ -68,7 +68,6 @@
             justify-content: center;
 
             #left-beneficios {
-                height: 8rem;
                 @include mixins.margem-central(90%);
                 align-items: center;
                 
