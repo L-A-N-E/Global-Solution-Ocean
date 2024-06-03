@@ -128,7 +128,6 @@ function closeModaHumano() {
 // FOOTER
 document.addEventListener('DOMContentLoaded', function() {
     const input = document.getElementById('input-footer');
-    const form = document.getElementById('form-input');
 
     input.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
