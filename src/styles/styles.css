@@ -847,6 +847,8 @@ footer #content-footer #footer-right form {
 }
 footer #content-footer #footer-right form input {
   border-radius: 80px;
+  border: solid 1px #4E8DA6;
+  color: #012E40;
   background: transparent;
   width: 100%;
   padding: 1rem 4rem 1rem 0.5rem;
@@ -856,6 +858,12 @@ footer #content-footer #footer-right form ::-moz-placeholder {
 }
 footer #content-footer #footer-right form ::placeholder {
   color: #012E40;
+}
+footer #content-footer #footer-right form ::-moz-placeholder:hover {
+  color: #4E8DA6;
+}
+footer #content-footer #footer-right form ::placeholder:hover {
+  color: #4E8DA6;
 }
 
 @media only screen and (max-width: 800px) {

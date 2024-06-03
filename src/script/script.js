@@ -126,21 +126,29 @@ function closeModaHumano() {
 
 
 // FOOTER
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const input = document.getElementById('input-footer');
+    const form = document.getElementById('form-input');
+
     input.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             event.preventDefault();
-
             // Alerta SweetAlert
-            Swal.fire({
-                title: "Seu Email foi Enviado com Sucesso!",
-                width: 450,
-                icon: "success",
-                padding: "3em",
-                color: "#012E40",
-                background: "#D8E6F2",
-            });
+        Swal.fire({
+            title: "Seu Email foi Enviado com Sucesso!",
+            width: 600,
+            icon: "success",
+            padding: "3em",
+            color: "#012E40",
+            background: "#D8E6F2",
+        }); 
         }
+
     });
 });
+
+
+
+
