@@ -12,6 +12,7 @@ footer {
     display: flex;
     align-items: center;
 
+    // Conteudo Principal
     #content-footer {
         @include mixins.margem-central(80%);
         height: 100%;
@@ -19,6 +20,7 @@ footer {
         align-items: center;
         justify-content: space-between;
 
+        // Div Esquerda
         #footer-left {
             @include mixins.flex-col();
             gap: 1rem;
@@ -39,6 +41,7 @@ footer {
             }
         }
 
+        // Div Direita
         #footer-right {
             width: 50vw;
             height: 100%;
@@ -71,6 +74,33 @@ footer {
                     
                     color: var.$cor-1;
                 }
+            }
+        }
+    }
+}
+
+// Responsividade
+
+// Tablet
+@media only screen and (max-width:800px) {
+    footer {
+        // Conteudo Principal
+        #content-footer {
+            flex-direction: column-reverse;
+
+            #footer-left {
+                h1 {
+                    text-align: center;
+                }
+
+                h5 {
+                    text-align: center;
+                }
+            }
+
+            #footer-right {
+                width: 100%;
+                align-items: center;
             }
         }
     }

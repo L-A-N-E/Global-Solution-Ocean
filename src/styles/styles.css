@@ -856,4 +856,20 @@ footer #content-footer #footer-right form ::-moz-placeholder {
 }
 footer #content-footer #footer-right form ::placeholder {
   color: #012E40;
+}
+
+@media only screen and (max-width: 800px) {
+  footer #content-footer {
+    flex-direction: column-reverse;
+  }
+  footer #content-footer #footer-left h1 {
+    text-align: center;
+  }
+  footer #content-footer #footer-left h5 {
+    text-align: center;
+  }
+  footer #content-footer #footer-right {
+    width: 100%;
+    align-items: center;
+  }
 }/*# sourceMappingURL=styles.css.map */
