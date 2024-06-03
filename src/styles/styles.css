@@ -474,6 +474,7 @@ header .margin-header #nav-mobile ul li a:hover::after {
   width: 70%;
 }
 #publico #content-publico #modal-animal {
+  animation: entradaModalAnimais ease-out 1s;
   cursor: pointer;
   display: none;
   width: 100%;
@@ -484,6 +485,7 @@ header .margin-header #nav-mobile ul li a:hover::after {
   align-items: center;
 }
 #publico #content-publico #modal-animal h1 {
+  animation: opacidadeTexto 4s ease-in;
   width: 80%;
   margin: 0 auto;
   font-family: "Freeman", sans-serif;
@@ -512,6 +514,7 @@ header .margin-header #nav-mobile ul li a:hover::after {
   opacity: 0.8;
 }
 #publico #content-publico #modal-humano {
+  animation: entradaModalHumano 1s ease-in;
   cursor: pointer;
   display: none;
   width: 100%;
@@ -522,6 +525,7 @@ header .margin-header #nav-mobile ul li a:hover::after {
   align-items: center;
 }
 #publico #content-publico #modal-humano h1 {
+  animation: opacidadeTexto 4s ease-in;
   width: 80%;
   margin: 0 auto;
   font-family: "Freeman", sans-serif;
@@ -533,6 +537,30 @@ header .margin-header #nav-mobile ul li a:hover::after {
   text-transform: uppercase;
 }
 
+@keyframes entradaModalHumano {
+  0% {
+    transform: translateX(50vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes entradaModalAnimais {
+  0% {
+    transform: translateX(-50vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes opacidadeTexto {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media only screen and (max-width: 840px) {
   #publico #content-publico {
     flex-direction: column;

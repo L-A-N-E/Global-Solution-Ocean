@@ -44,6 +44,7 @@
     
         // Modal Animais Marinhos
         #modal-animal {
+            animation: entradaModalAnimais ease-out 1s;
             cursor: pointer;
             display: none;
             width: 100%;
@@ -54,6 +55,7 @@
             align-items: center;
     
             h1 {
+                animation: opacidadeTexto 4s ease-in;
                 @include mixins.margem-central(80%);
                 @include mixins.ff-fs-cl(var.$text-t, 3rem, var.$cor-5, 300);
                 opacity: 1;
@@ -86,6 +88,8 @@
     
         // Modal Seres Humanos
         #modal-humano {
+            animation: entradaModalHumano 1s ease-in;
+
             cursor: pointer;
             display: none;
             width: 100%;
@@ -96,6 +100,7 @@
             align-items: center;
 
             h1 {
+                animation: opacidadeTexto 4s ease-in;
                 @include mixins.margem-central(80%);
                 @include mixins.ff-fs-cl(var.$text-t, 3rem, var.$cor-5, 300);
                 opacity: 1;
@@ -105,6 +110,37 @@
         }
     }
 }
+
+// KeyFrames
+@keyframes entradaModalHumano {
+    0% {
+        transform: translateX(50vw);
+    }
+    100% {
+        transform: translateX(0); 
+    }
+}
+
+@keyframes entradaModalAnimais {
+    0% {
+        transform: translateX(-50vw);
+    }
+    100% {
+        transform: translateX(0); 
+    }
+}
+
+// Efeito Texto Modal
+@keyframes opacidadeTexto {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 
 // RESPONSIVIDADE
 
