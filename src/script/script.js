@@ -126,8 +126,6 @@ function closeModaHumano() {
 
 
 // FOOTER
-
-
 document.addEventListener('DOMContentLoaded', function() {
     const input = document.getElementById('input-footer');
     const form = document.getElementById('form-input');
@@ -135,7 +133,8 @@ document.addEventListener('DOMContentLoaded', function() {
     input.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             event.preventDefault();
-            // Alerta SweetAlert
+
+        // Alerta SweetAlert
         Swal.fire({
             title: "Seu Email foi Enviado com Sucesso!",
             width: 600,
@@ -145,7 +144,6 @@ document.addEventListener('DOMContentLoaded', function() {
             background: "#D8E6F2",
         }); 
         }
-
     });
 });
 
