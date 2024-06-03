@@ -123,3 +123,24 @@ function closeModaHumano() {
     const seeDivHumano = document.getElementById('seres-humanos');
     seeDivHumano.style.display = 'flex';
 }
+
+
+// FOOTER
+document.addEventListener('DOMContentLoaded', function() {
+    const input = document.getElementById('input-footer');
+    input.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+
+            // Alerta SweetAlert
+            Swal.fire({
+                title: "Seu Email foi Enviado com Sucesso!",
+                width: 450,
+                icon: "success",
+                padding: "3em",
+                color: "#012E40",
+                background: "#D8E6F2",
+            });
+        }
+    });
+});
