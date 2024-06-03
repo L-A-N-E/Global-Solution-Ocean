@@ -1,0 +1,113 @@
+// Variaveis
+@use '../abstract/var';
+
+// Mixins
+@use '../abstract/mixins';
+
+// Estilizando Seção Público
+#publico-alvo {
+    display: flex;
+    width: 100vw;
+    height: 500px;
+    background-color: var.$cor-1;
+
+    // Classe Div
+    .box {
+        width: 50vw;
+        height: 100%;
+        transition: width 1s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+    }
+
+
+    // Animais
+    .left-pub {
+        background-image: url(../assets/publico/animal.png);
+        background-position: center;
+        background-size: cover;
+
+        h1 {
+            transition: ease-in-out 300ms;
+            @include mixins.ff-fs-cl(var.$text-t, 3rem, var.$cor-branca, 400);
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    // Humanos
+    .right-pub {
+        background-image: url(../assets/publico/humano.png);
+        background-position: center;
+        background-size: cover;
+
+        h1 {
+            transition: ease-in-out 300ms;
+            @include mixins.ff-fs-cl(var.$text-t, 3rem, var.$cor-branca, 400);
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    // Efeito 1
+    .expand-left-pub {
+        width: 100vw;
+    }
+
+    // Efeito 2
+    .expand-right-pub {
+        width: 0;
+    }
+}
+
+
+// Responsividade
+
+// Tablet
+@media only screen and (max-width:800px) {
+    #publico-alvo {
+        @include mixins.flex-col();
+
+        // Classe Div
+        .box {
+            cursor: none;
+            width: 100%;
+        }
+
+        // Info Animais
+        #box-1 {
+            cursor: none;
+            h1 {
+                @include mixins.margem-central(70%);
+                text-align: center;
+                font-size: 2rem;
+            }
+        }
+
+        // Centralizar texto 1
+        #text-box-1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        // Info Humanos
+        #box-2 {
+            cursor: none;
+            h1 {
+                @include mixins.margem-central(80%);
+                text-align: center;
+                font-size: 2rem;
+            }
+        }
+
+        // Centralizar texto 2
+        #text-box-2 {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

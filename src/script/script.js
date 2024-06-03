@@ -73,56 +73,42 @@ slideTecnologias();
 
 
 // SEÇÃO PUBLICO ALVO
+// Efeito Empurrão
+document.addEventListener('DOMContentLoaded', function() {
 
-// Modal Animais
-// Abrir Modal Animais Marinhos
-function openModalAnimais() {
-    const openAnimais = document.getElementById('modal-animal');
-    openAnimais.style.display = 'flex';
+    // Variaveis
+    const box1 = document.getElementById('box-1');
+    const box2 = document.getElementById('box-2');
+    const text1 = document.getElementById('text-box-1')
+    const text2 = document.getElementById('text-box-2')
 
-    const closeDivAnimais = document.getElementById('animais');
-    closeDivAnimais.style.display = 'none'; 
+    // Animais
+    box1.addEventListener('click', function() {
+        if (!box1.classList.contains('expand-left-pub')) {
+            box1.classList.add('expand-left-pub');
+            box2.classList.add('expand-right-pub');
+            text2.style.display = 'none'
+        } else {
+            box1.classList.remove('expand-left-pub');
+            box2.classList.remove('expand-right-pub');
+            text2.style.display = 'flex'
+        }
+    });
 
-    const closeDivHumano = document.getElementById('seres-humanos');
-    closeDivHumano.style.display = 'none';
-}
+    // Seres Humanos
+    box2.addEventListener('click', function() {
+        if (!box2.classList.contains('expand-left-pub')) {
+            box2.classList.add('expand-left-pub');
+            box1.classList.add('expand-right-pub');
+            text1.style.display = 'none'
+        } else {
+            box2.classList.remove('expand-left-pub');
+            box1.classList.remove('expand-right-pub');
+            text1.style.display = 'flex'
+        }
+    });
+});
 
-// Fechar Modal Animais Marinhos
-function closeModaAnimais() {
-    const closeAnimais = document.getElementById('modal-animal');
-    closeAnimais.style.display = 'none';
-
-    const seeDivAnimais = document.getElementById('animais');
-    seeDivAnimais.style.display = 'flex'; 
-
-    const seeDivHumano = document.getElementById('seres-humanos');
-    seeDivHumano.style.display = 'flex';
-}
-
-// Modal Seres Humanos
-// Abrir Modal Seres Humanos
-function openModaHumano() {
-    const openAnimais = document.getElementById('modal-humano');
-    openAnimais.style.display = 'flex';
-
-    const closeDivAnimais = document.getElementById('animais');
-    closeDivAnimais.style.display = 'none'; 
-
-    const closeDivHumano = document.getElementById('seres-humanos');
-    closeDivHumano.style.display = 'none';
-}
-
-// Fechar Modal Seres Humanos
-function closeModaHumano() {
-    const closeAnimais = document.getElementById('modal-humano');
-    closeAnimais.style.display = 'none';
-
-    const seeDivAnimais = document.getElementById('animais');
-    seeDivAnimais.style.display = 'flex'; 
-
-    const seeDivHumano = document.getElementById('seres-humanos');
-    seeDivHumano.style.display = 'flex';
-}
 
 
 // FOOTER
@@ -145,7 +131,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-
-
-
-

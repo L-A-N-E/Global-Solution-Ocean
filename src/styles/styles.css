@@ -403,6 +403,94 @@ header .margin-header #nav-mobile ul li a:hover::after {
     text-align: center;
   }
 }
+#publico-alvo {
+  display: flex;
+  width: 100vw;
+  height: 500px;
+  background-color: #012E40;
+}
+#publico-alvo .box {
+  width: 50vw;
+  height: 100%;
+  transition: width 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+#publico-alvo .left-pub {
+  background-image: url(../assets/publico/animal.png);
+  background-position: center;
+  background-size: cover;
+}
+#publico-alvo .left-pub h1 {
+  transition: ease-in-out 300ms;
+  font-family: "Freeman", sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+#publico-alvo .right-pub {
+  background-image: url(../assets/publico/humano.png);
+  background-position: center;
+  background-size: cover;
+}
+#publico-alvo .right-pub h1 {
+  transition: ease-in-out 300ms;
+  font-family: "Freeman", sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+#publico-alvo .expand-left-pub {
+  width: 100vw;
+}
+#publico-alvo .expand-right-pub {
+  width: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  #publico-alvo {
+    display: flex;
+    flex-direction: column;
+  }
+  #publico-alvo .box {
+    cursor: none;
+    width: 100%;
+  }
+  #publico-alvo #box-1 {
+    cursor: none;
+  }
+  #publico-alvo #box-1 h1 {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+  }
+  #publico-alvo #text-box-1 {
+    display: flex;
+    justify-content: center;
+  }
+  #publico-alvo #box-2 {
+    cursor: none;
+  }
+  #publico-alvo #box-2 h1 {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+  }
+  #publico-alvo #text-box-2 {
+    display: flex;
+    justify-content: center;
+  }
+}
 #objetivo {
   width: 100vw;
   height: 500px;
@@ -443,168 +531,6 @@ header .margin-header #nav-mobile ul li a:hover::after {
 @media only screen and (max-width: 800px) {
   #objetivo #content-objetivo h1 {
     font-size: 2rem;
-  }
-}
-#publico #content-publico {
-  width: 100vw;
-  height: 500px;
-  background-color: #000;
-  display: flex;
-}
-#publico #content-publico .nome-publico {
-  color: #ADC5D9;
-  font-size: 2rem;
-  font-weight: 500;
-}
-#publico #content-publico #animais {
-  display: flex;
-  width: 50%;
-  height: 100%;
-  background-image: url(../assets/publico/animal.png);
-  background-position: center;
-  background-size: cover;
-  transition: ease-in all 1s;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.3;
-}
-#publico #content-publico #animais:hover {
-  opacity: 0.8;
-  width: 70%;
-}
-#publico #content-publico #modal-animal {
-  animation: entradaModalAnimais ease-in 700ms;
-  cursor: pointer;
-  display: none;
-  width: 100%;
-  height: 100%;
-  background-image: url(../assets/publico/animal-modal.png);
-  background-position: center;
-  background-size: cover;
-  align-items: center;
-}
-#publico #content-publico #modal-animal h1 {
-  animation: opacidadeTexto 4s ease-in;
-  width: 80%;
-  margin: 0 auto;
-  font-family: "Freeman", sans-serif;
-  font-size: 3rem;
-  color: #D8E6F2;
-  font-weight: 300;
-  opacity: 1;
-  padding: 0;
-  text-transform: uppercase;
-}
-#publico #content-publico #seres-humanos {
-  display: flex;
-  width: 50%;
-  height: auto;
-  background-image: url(../assets/publico/humano.png);
-  background-position: center;
-  background-size: cover;
-  align-items: center;
-  justify-content: center;
-  transition: ease-in all 1s;
-  cursor: pointer;
-  opacity: 0.3;
-}
-#publico #content-publico #seres-humanos:hover {
-  width: 70%;
-  opacity: 0.8;
-}
-#publico #content-publico #modal-humano {
-  animation: entradaModalHumano 700ms ease-in;
-  cursor: pointer;
-  display: none;
-  width: 100%;
-  height: 100%;
-  background-image: url(../assets/publico/humano-modal.png);
-  background-position: center;
-  background-size: cover;
-  align-items: center;
-}
-#publico #content-publico #modal-humano h1 {
-  animation: opacidadeTexto 4s ease-in;
-  width: 80%;
-  margin: 0 auto;
-  font-family: "Freeman", sans-serif;
-  font-size: 3rem;
-  color: #D8E6F2;
-  font-weight: 300;
-  opacity: 1;
-  padding: 0;
-  text-transform: uppercase;
-}
-
-@keyframes entradaModalHumano {
-  0% {
-    transform: translateX(100vw);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes entradaModalAnimais {
-  0% {
-    transform: translateX(-100vw);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes opacidadeTexto {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@media only screen and (max-width: 840px) {
-  #publico #content-publico {
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: auto;
-  }
-  #publico #content-publico .nome-publico {
-    font-size: 1.3rem;
-  }
-  #publico #content-publico #animais {
-    height: 200px;
-    width: 100%;
-    opacity: 0.7;
-  }
-  #publico #content-publico #animais:hover {
-    width: 100%;
-  }
-  #publico #content-publico #modal-animal {
-    height: 400px;
-  }
-  #publico #content-publico #modal-animal h1 {
-    width: 90%;
-    margin: 0 auto;
-    font-size: 2rem;
-    text-align: start;
-    text-shadow: 0 0 50px #000;
-  }
-  #publico #content-publico #seres-humanos {
-    opacity: 0.7;
-    height: 200px;
-    width: 100%;
-  }
-  #publico #content-publico #seres-humanos:hover {
-    width: 100%;
-  }
-  #publico #content-publico #modal-humano {
-    height: 400px;
-  }
-  #publico #content-publico #modal-humano h1 {
-    width: 90%;
-    margin: 0 auto;
-    font-size: 2rem;
-    text-align: start;
-    text-shadow: 0 0 50px #000;
   }
 }
 #beneficios {
