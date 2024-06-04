@@ -231,6 +231,7 @@ header .margin-header #nav-mobile ul li a:hover::after {
      object-fit: cover;
   transform: translate(-50%, -50%);
   z-index: -1;
+  -webkit-user-drag: none;
 }
 #home .video-background-section #content-home {
   width: 80%;
@@ -463,6 +464,7 @@ header .margin-header #nav-mobile ul li a:hover::after {
   #publico-alvo .box {
     cursor: none;
     width: 100%;
+    pointer-events: none;
   }
   #publico-alvo #box-1 {
     cursor: none;
