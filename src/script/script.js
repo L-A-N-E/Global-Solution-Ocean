@@ -50,7 +50,7 @@ window.addEventListener('scroll', function() {
 
 // SEÇÃO TECNOLOGIA UTILIZADA
 // Variaveis Tecnologia 
-let imagens = ['../../src/assets/tecnologias/html.png', '../../src/assets/tecnologias/css.png', '../../src/assets/tecnologias/js.png', '../../src/assets/tecnologias/c++.png' , '../../src/assets/tecnologias/py.png'];
+let imagens = ['../assets/tecnologias/html.png', '../assets/tecnologias/css.png', '../assets/tecnologias/js.png', '../assets/tecnologias/c++.png' , '../assets/tecnologias/py.png'];
 let index = 0;
 let time = 5000;
 
